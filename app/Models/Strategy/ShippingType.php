@@ -13,7 +13,7 @@ class ShippingType
         'SEDEX'
     ];
 
-    public function validate($shippingType){
+    public function validate(string $shippingType) : bool{
         return in_array($shippingType, $this->shippingTypes);
     }
 
