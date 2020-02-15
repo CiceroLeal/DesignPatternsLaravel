@@ -28,6 +28,9 @@ class Log
         $this->txtLog .= $txt;
     }
 
+    /**
+     * @return string
+     */
     public function getLog() : string{
         return $this->txtLog;
     }

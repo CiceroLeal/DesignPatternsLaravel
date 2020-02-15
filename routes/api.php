@@ -17,5 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('calc-shipping', 'Strategy\MainController@shippingCalc');
-Route::post('insert-log', 'Singleton\MainController@insertLog');
+Route::post('calc-shipping', 'Strategy\MainController@shippingCalc')->name('shipingCalc');
+Route::post('insert-log', 'Singleton\MainController@insertLog')->name('insertLog');
+Route::get('computer', 'Facade\MainController@buildComputer')->name('buildComputer');
