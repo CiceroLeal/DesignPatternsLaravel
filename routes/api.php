@@ -20,3 +20,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('calc-shipping', 'Strategy\MainController@shippingCalc')->name('shipingCalc');
 Route::post('insert-log', 'Singleton\MainController@insertLog')->name('insertLog');
 Route::get('computer', 'Facade\MainController@buildComputer')->name('buildComputer');
+Route::get('person', 'Builder\MainController@getPerson')->name('getPerson');
